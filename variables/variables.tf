@@ -4,6 +4,17 @@ variable "filename" {
   description = "Path of placement of pet file"
 }
 
+variable "test-pets" {
+  type=set(string)
+
+  default = [
+    "./test_dog.txt",
+    "./test_cat.txt",
+    "./test_hamster.txt"
+  ]
+  
+}
+
 variable "content" {
   default     = "We love dogs!"
   type        = string
